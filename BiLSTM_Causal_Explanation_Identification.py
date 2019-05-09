@@ -46,7 +46,7 @@ class BiLSTM_Causal_Explanation_Identification(nn.Module):
     def forward(self, du_embedding_seq):
         # use batch input and get all the hidden vectors and concatenate them
         tweet_input = []
-        # keep track of missing dus and average all embeddings of dus (first, continue when facing the len(0), then after getting out of the for loop, use comprehension to replace len(0) vecs with avg
+        # keep track of missing dus and average all embeddings of dus 
         empty_seq_du_idxs=[]
         for i in range(len(du_embedding_seq)):
             # get du embeddings from the given tweet
