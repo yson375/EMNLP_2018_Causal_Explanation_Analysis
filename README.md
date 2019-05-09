@@ -2,6 +2,15 @@
 
 Codes and examples for the paper [Causal Explanation Analysis on Social Media](https://arxiv.org/pdf/1809.01202.pdf) published in EMNLP 2018
 
+```
+@inproceedings{son2018causal,
+  title={Causal Explanation Analysis on Social Media},
+  author={Son, Youngseo and Bayas, Nipun and Schwartz, H Andrew},
+  booktitle={Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+  pages={3350--3359},
+  year={2018}
+}
+```
 
 ## Dependencies
 - [DLATK](https://github.com/dlatk/dlatk)
