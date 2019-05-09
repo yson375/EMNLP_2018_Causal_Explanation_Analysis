@@ -63,16 +63,10 @@ class BiLSTM_Causal_Explanation_Identification(nn.Module):
             tweet_input.append(du_hidden.view(self.hidden_dim*2, 1, -1))
 
         tweet_input=list(tweet_input)
-
-
         tweet_input_mean = torch.stack(tweet_input).mean(dim=0)
-
-
-
 
         for i in range(len(empty_seq_du_idxs)):
             tweet_input.insert(i+empty_seq_du_idxs[i], tweet_input_mean)
-
 
         tweet_input = torch.cat(tweet_input).view(len(tweet_input), 1,-1)  # concat hidden vectors from the last cells of forward and backward LSTM
         tweet_input = F.dropout(tweet_input, p=0.3, training=self.training)
