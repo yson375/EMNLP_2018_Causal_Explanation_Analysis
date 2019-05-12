@@ -19,8 +19,8 @@ class BiLSTM_Causal_Explanation_Identification(nn.Module):
         self.causality_num_layer = causality_num_layer
         self.causality_num_direction = causality_num_direction
         self.is_cuda=is_cuda
-        self.du_lstm = nn.LSTM(embedding_dim, hidden_dim, bidirectional=True)
-        self.causality_lstm = nn.LSTM(hidden_dim * 2, hidden_dim, bidirectional=causality_num_direction == 2)
+        self.du_lstm = nn.LSTM(embedding_dim, hidden_dim, bidirectional=True) # Word LSTM on the paper
+        self.causality_lstm = nn.LSTM(hidden_dim * 2, hidden_dim, bidirectional=causality_num_direction == 2) # DA LSTM on the paper
 
 
 
