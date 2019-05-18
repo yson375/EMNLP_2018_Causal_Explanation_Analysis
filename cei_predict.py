@@ -69,6 +69,8 @@ def main():
 
     if is_cuda:
         model = model.cuda()
+    else:
+        model = model.cpu()
 
     start=time.time()
     predict_csv = csv.writer(predict_file)
