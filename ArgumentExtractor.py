@@ -14,10 +14,10 @@ def disconMarking(mwc_conns, arg, forms, u_poss, head_idxs, connective_list, tem
         if i in mwc_conns: # skip when the index falls in to the mwc already found
             i += 1
             continue
-        nWords=' '.join([str(forms[j]) for j in range(i,i+disConLength)])
+        words=' '.join([str(forms[j]) for j in range(i,i+disConLength)])
         
 
-        if nWords in connective_list:
+        if words in connective_list:
             if ('L' in u_poss[prev_p_marker:i] or 'M' in u_poss[prev_p_marker:i] or 'V' in u_poss[prev_p_marker:i] \
                 or 'Y' in u_poss[prev_p_marker:i] or 'G' in u_poss[prev_p_marker:i]) \
                     and ('L' in u_poss[i+disConLength:arg[1]] or 'M' in u_poss[i+disConLength:arg[1]] or 'V' in u_poss[i+disConLength:arg[1]] \
